@@ -2,7 +2,7 @@ pipeline {
 				agent any
 				stages {
 					stage('BUILD') {
-            agent{label1 'ubuntu'}
+            agent{label 'ubuntu'}
 						steps {
 							sh '''
 								pwd
@@ -13,7 +13,7 @@ pipeline {
 					}
 					
 					stage('TEST') {
-            agent{label2 'ubuntu2'}
+            agent{label 'ubuntu2'}
 						steps {
 							sh '''
 								pwd
@@ -25,7 +25,7 @@ pipeline {
 					
 					stage('DEPLOY') {
 						steps {
-              agent{label1 'ubuntu'}
+              agent{label 'ubuntu'}
 							sh '''
 								pwd
 								sleep 5
